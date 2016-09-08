@@ -15,3 +15,7 @@ var timer = setInterval(function(){
 	$(".tips").css({display:"none"});
 	clearInterval(timer);
 },3000)
+
+$(".P4but").click(function(){
+	location.href="index.html"
+})

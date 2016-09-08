@@ -15,7 +15,7 @@ li {
 /************************************序幕*/
 .tips{
 	position: absolute;
-	display: none;
+	display: block;
 	height: 100%;
 	width: 100%;
 	top: 0;
@@ -135,27 +135,32 @@ li {
 }
 .goDown1{
 	top: 1rem;
-	animation: godown1 1s 100ms linear infinite;
+	-webkit-animation: godown 0.8s 0s linear infinite;
+	-moz-animation: godown 0.8s 0s linear infinite;
+	-o-animation: godown 0.8s 0s linear infinite;
+	animation: godown 0.8s 0s linear infinite;
 }
 .goDown2{
 	top: 2.5rem;
-	animation: godown1 1s 200ms linear infinite;
+	-webkit-animation: godown 0.8s 0.3s linear infinite;
+	-moz-animation: godown 0.8s 0.3s linear infinite;
+	-o-animation: godown 0.8s 0.3s linear infinite;
+	animation: godown 0.8s 0.3s linear infinite;
 }
 .goDown3{
 	top: 4rem;
-	animation: godown1 1s 300ms linear infinite;
+	-webkit-animation: godown 0.8s 0.6s linear infinite;
+	-moz-animation: godown 0.8s 0.6s linear infinite;
+	-o-animation: godown 0.8s 0.6s linear infinite;
+	animation: godown 0.8s 0.6s linear infinite;
 }
 
-@keyframes godown1{
+@keyframes godown{
 	0%{
 		opacity: 0.3;
-		margin-top: -4px;
+		margin-top: 0;
 	}
-	20%{
-		opacity: 1;
-		margin-top: -4px;
-	}
-	75%{
+	50%{
 		opacity: 1;
 		margin-top: -4px;
 	}
@@ -164,7 +169,48 @@ li {
 		margin-top: 0;
 	}
 }
-
+@-moz-keyframes godown{
+	0%{
+		opacity: 0.3;
+		margin-top:0;
+	}
+	50%{
+		opacity: 1;
+		margin-top: -4px;
+	}
+	100%{
+		opacity: 0.3;
+		margin-top: 0;
+	}
+}
+@-webkit-keyframes godown{
+	0%{
+		opacity: 0.3;
+		margin-top: 0;
+	}
+	50%{
+		opacity: 1;
+		margin-top: -4px;
+	}
+	100%{
+		opacity: 0.3;
+		margin-top: 0;
+	}
+}
+@-ms-keyframes godown{
+	0%{
+		opacity: 0.3;
+		margin-top: 0;
+	}
+	50%{
+		opacity: 1;
+		margin-top: -4px;
+	}
+	100%{
+		opacity: 0.3;
+		margin-top: 0;
+	}
+}
 .P_text{
 	position: absolute;
 	top: 6rem;
@@ -178,16 +224,16 @@ li {
 	height: 6rem;
 	width: auto;
 	position: absolute;
-	bottom: 50%;
+	top: 8rem;
 	left: 50%;
 	margin-left: -3rem;
 }
 .P_act{
 	position: absolute;
-	top:60%;
+	bottom:10%;
 	left:10%;
-	width: 70%;
-	height:30%;
+	width: 10rem;
+	height:5rem;
 }
 .P3_tit{
 	font-size: 1.5rem;
@@ -207,4 +253,93 @@ li {
 	margin-left: -5rem;
 	border-radius: 50%;
 	box-shadow: 0px 2px 0px 0px #c1c1c1;
+}
+.P3_text{
+	width: 10rem;
+	height: 5rem;
+	border: 1px solid #EEEEEE;
+	position: absolute;
+	top:65%;
+	left: 50%;
+	margin-left: -5rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 1rem;
+	-webkit-box-shadow: 4px 4px 4px 0px #999999;
+	-moz-box-shadow: 4px 4px 4px 0px #999999;
+	box-shadow: 4px 4px 4px 0px #999999;
+}
+.P3_textb{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	flex-wrap: wrap;
+	flex-direction: column;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 1rem;
+	
+}
+.P3_text::before{
+	content: "";
+	display: block;
+	height: 0px;
+	width: 0;
+	position: absolute;
+	top: -1.9rem;
+	left:7rem;
+	border-top: 1rem solid transparent;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-bottom: 1rem solid #FFFFFF;
+}
+.P3_text span{
+	display: inline-flex;
+	height: 50%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	color: #e6356b;
+}
+.P3t_top{
+	background: #ffffff;
+}
+.P3t_bottom{
+	background: #f7f7f7;
+}
+/******************************/
+.P4_tit{
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	font-size: 1rem;
+	color: #E6356B;
+	text-align: center;
+}
+.P4but{
+	display:flex;
+	height: 3rem;
+	width: 9rem;
+	background: url(../img/P4_but.png) no-repeat;
+	background-size: 100%;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+	border-radius: 0.5rem;
+	position: absolute;
+	bottom: 10%;
+	left:50%;
+	margin-left: -4.5rem;
+}
+.P4but span{
+	display: inline-flex;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	color: #FFFFFF;
 }
