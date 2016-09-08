@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>title</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+	</head>
+
+	<body>
+		<div></div>
+
+		<script type="text/javascript" charset="utf-8" src="js/fontsize.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="iscroll/iscroll.js"></script>
+		<script type="text/javascript" charset="utf-8" src="iscroll/iscroll-probe.js"></script>
+		<script src="js/swiper-3.3.1.jquery.min.js"></script>
+		<script src="js/swiper.animate1.0.2.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			var myScroll = new IScroll("#wrapper", {
+				mouseWheel: true,
+				scrollbars: true,
+				tap: true,
+				click: true
+			});
+
+			function jumpto() {
+				//跳转到某个位置
+				console.log("开始跳转");
+				myScroll.scrollTo(0, 0, 1000, IScroll.utils.ease.elastic);
+			}
+			$('#wrapper li').on('tap', function() {
+				console.log("您现在tap开始");
+			});
+
+			$('#wrapper li').on('click', function() {
+				console.log("您现在click开始");
+			});
+			/*myIScroll.on('beforeScrollStart',function(swiper){
+//			console.log("beforeScrollStart -- 滚动开始前");
+//			console.log(swiper);//没有返回
+		})
+		myIScroll.on('scrollCancel',function(){
+//			console.log("scrollCancel --滚动初始化完成，但没有执行");
+//			console.log(swiper);//没有返回
+			
+		})
+		myIScroll.on('scrollStart',function(){
+//			console.log('scrollStart -- 滚动开始');
+//			console.log(swiper);//没有返回
+		})
+		myIScroll.on('scroll',function(){
+			console.log('scroll --- 滚动中');
+//			console.log(swiper);
+//			var that = $(this);
+//			console.log(that);
+//			console.log(that[0].y);
+			console.log(myIScroll.y);
+		})
+		myIScroll.on('scrollEnd',function(){
+//			console.log("scrollEnd -- 滚动结束");
+//			console.log(swiper);//没有返回
+			
+		})*/
+		</script>
+	</body>
+
+</html>
